@@ -1,0 +1,11 @@
+﻿TOPIC
+	about_MigrateCitrixUPMtoFSLogix
+	
+SHORT DESCRIPTION
+	Explains how to use the MigrateCitrixUPMtoFSLogix powershell module
+	
+LONG DESCRIPTION
+	<Insert Content here>
+
+KEYWORDS
+	MigrateCitrixUPMtoFSLogix

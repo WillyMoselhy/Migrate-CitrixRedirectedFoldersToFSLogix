@@ -1,0 +1,26 @@
+﻿
+# ignore the settings folder and files for VSCode and PSS
+.vscode/*
+*.psproj
+*TempPoint*
+
+
+# Ignore staging info from Visual Studio
+library/MigrateCitrixUPMtoFSLogix/.vs/*
+library/MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix/bin/*
+library/MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix/obj/*
+
+# ignore PowerShell Studio MetaData
+MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix.psproj
+MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix.psproj.bak
+MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix.psprojs
+MigrateCitrixUPMtoFSLogix/MigrateCitrixUPMtoFSLogix.psproj
+
+# ignore the TestResults
+TestResults/*
+
+# ignore the publishing Directory
+publish/*
+
+# ingore local build and pulish script
+BuildAndPublish.ps1
