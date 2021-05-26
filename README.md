@@ -1,31 +1,16 @@
 ﻿# Description
 
-Insert a useful description for the MigrateCitrixUPMtoFSLogix project here.
+This is PowerShell module to aid the migration from Citrix UPM and Redirected folders into FSLogix.
+The modules utilizes FSLogix's FRX.exe to create VHD files from existing UPM profiles, then add files in redirected folders into the disk.
+It then copies the VHD into FSLogix providers (SMB File shares), and optionally add the user to an AD Group.
 
-Remember, it's the first thing a visitor will see.
+Output includes success or failure and information on copied files.
 
-# Project Setup Instructions
-## Working with the layout
+# Installation
+Get the latest version by running `Import-Module -Name $MigrateCitrixUPMtoFSLogix` or by building the module from source code on GitHub.
 
-- Don't touch the psm1 file
-- Place functions you export in `functions/` (can have subfolders)
-- Place private/internal functions invisible to the user in `internal/functions` (can have subfolders)
-- Don't add code directly to the `postimport.ps1` or `preimport.ps1`.
-  Those files are designed to import other files only.
-- When adding files & folders, make sure they are covered by either `postimport.ps1` or `preimport.ps1`.
-  This adds them to both the import and the build sequence.
+# Prerequisites
+The PowerShell module will install PSFramework, it also require Active Directory module to get the SIDs and add to AD Group if used.
 
-## Setting up CI/CD
-
-> To create a PR validation pipeline, set up tasks like this:
-
-- Install Prerequisites (PowerShell Task; VSTS-Prerequisites.ps1)
-- Validate (PowerShell Task; VSTS-Validate.ps1)
-- Publish Test Results (Publish Test Results; NUnit format; Run no matter what)
-
-> To create a build/publish pipeline, set up tasks like this:
-
-- Install Prerequisites (PowerShell Task; VSTS-Prerequisites.ps1)
-- Validate (PowerShell Task; VSTS-Validate.ps1)
-- Build (PowerShell Task; VSTS-Build.ps1)
-- Publish Test Results (Publish Test Results; NUnit format; Run no matter what)
+# Usage
+Review the example runner script 'MigrationScript.ps1'. It logs results into file as well as show it on screen.
