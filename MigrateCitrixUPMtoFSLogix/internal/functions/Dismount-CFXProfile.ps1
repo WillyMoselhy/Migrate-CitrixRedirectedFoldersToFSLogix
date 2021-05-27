@@ -13,7 +13,7 @@ function Dismount-CFXProfile {
     )
 
     $result = & $FRX end-edit-profile -filename $DiskPath -cookie $Cookie
-    if($result -ne 'Operation completed successfully!' ){
+    if($result[-1] -ne 'Operation completed successfully!' ){
         throw ($result | Out-String)
     }
 }

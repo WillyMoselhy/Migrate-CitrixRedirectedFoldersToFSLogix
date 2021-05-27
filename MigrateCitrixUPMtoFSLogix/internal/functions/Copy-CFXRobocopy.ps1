@@ -6,7 +6,9 @@ function Copy-CFXRobocopy {
         [Parameter(Mandatory = $true)]
         [string] $Destination,
         [Parameter(Mandatory = $true)]
-        [string] $LogPath
+        [string] $LogPath,
+        [Parameter(Mandatory = $false)]
+        [int] $RobocopyMT
     )
 
 
@@ -15,7 +17,8 @@ function Copy-CFXRobocopy {
         $robocopyArgs = @(
         $Source
         $Destination
-        '/XJ','/E','/B','/MT:10','/W:1','/R:1','/NP','/NS','/NDL' ,'/COPYALL'
+        "/MT:$RobocopyMT"
+        '/XJ','/E','/B','/W:1','/R:1','/NP','/NS','/NDL','/COPYALL'
     )
     $robocopyProcess = Start-Process -FilePath Robocopy -ArgumentList $robocopyArgs -RedirectStandardOutput $LogPath -Wait -PassThru -NoNewWindow
     <#
