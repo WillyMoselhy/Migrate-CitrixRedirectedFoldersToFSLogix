@@ -7,7 +7,7 @@ It then copies the VHD into FSLogix providers (SMB File shares), and optionally 
 Output includes success or failure and information on copied files.
 
 # Installation
-Get the latest version by running `Import-Module -Name $MigrateCitrixUPMtoFSLogix` or by building the module from source code on GitHub.
+Get the latest version by running `Install-Module -Name MigrateCitrixUPMtoFSLogix` or by building the module from source code on GitHub.
 
 # Prerequisites
 The PowerShell module will install PSFramework, it also require Active Directory module to get the SIDs and add to AD Group if used.
