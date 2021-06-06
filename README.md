@@ -13,4 +13,4 @@ Get the latest version by running `Import-Module -Name $MigrateCitrixUPMtoFSLogi
 The PowerShell module will install PSFramework, it also require Active Directory module to get the SIDs and add to AD Group if used.
 
 # Usage
-Review the example runner script 'MigrationScript.ps1'. It logs results into file as well as show it on screen.
+Review the example runner script ['MigrationScript.ps1'](file:/../ExampleMigrationScript.ps1). It logs results into file as well as show it on screen.
